@@ -6,6 +6,7 @@ import {SharedLibModule} from "./shared-lib.module";
   imports: [
     SharedLibModule
   ],
+  exports:[SharedLibModule],
   declarations: [],
 })
 export class SharedModule {

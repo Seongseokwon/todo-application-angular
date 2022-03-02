@@ -15,7 +15,10 @@
 /* ===========================
     회원가입
 ============================== */
-
+.account_container {
+  display: flex;
+  justify-content: center;
+}
 
 .account_form {
   padding: 2rem;

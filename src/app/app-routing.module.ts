@@ -5,7 +5,7 @@ import {MainComponent} from "./layout/main/main.component";
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'account',

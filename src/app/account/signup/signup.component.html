@@ -1,9 +1,20 @@
-<form class="account_form" [formGroup]="signupForm">
-  <div><label for="email">E-mail <span class="text-danger"> *</span></label> <input type="text" id="email"></div>
-  <div><label for="password">비밀번호<span class="text-danger"> *</span></label> <input type="password" id="password"></div>
-  <div><label for="passwordConfirm">비밀번호 확인</label> <input type="password" id="passwordConfirm"></div>
-  <div><label for="realName">이름<span class="text-danger"> *</span></label> <input type="text" id="realName"></div>
-  <div><label for="nickname">닉네임<span class="text-danger"> *</span></label> <input type="text" id="nickname"></div>
+<form class="account_form" [formGroup]="signupForm" (ngSubmit)="signupRequest(signupForm.value)">
+  <div>
+    <label for="email">E-mail <span class="text-danger"> *</span></label>
+    <input type="text" id="email" formControlName="email">
+  </div>
+  <div>
+    <label for="password">비밀번호<span class="text-danger"> *</span></label>
+    <input type="password" id="password" formControlName="password"></div>
+  <div>
+    <label for="passwordConfirm">비밀번호 확인</label>
+    <input type="password" id="passwordConfirm" formControlName="passwordConfirm"></div>
+  <div>
+    <label for="username">이름<span class="text-danger"> *</span></label>
+    <input type="text" id="username" formControlName="username"></div>
+  <div>
+    <label for="nickname">닉네임<span class="text-danger"> *</span></label>
+    <input type="text" id="nickname" formControlName="nickname"></div>
 
   <div class="account_btn-group">
     <button class="btn" type="button" (click)="linkToLogin()">취소</button>

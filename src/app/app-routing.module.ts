@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: MainComponent
+  },
+  {
+    path: 'account',
+    loadChildren: () => import('./account/account.module').then(m => m.AccountModule)
   }
 ];
 
